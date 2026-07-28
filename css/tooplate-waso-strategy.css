@@ -523,6 +523,11 @@ strong {
   padding: 30px;
   text-align: left;
   transition: all 0.3s ease-in-out;
+  height: 220px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .service-card h3 {
@@ -551,6 +556,62 @@ strong {
   color: var(--primary-color);
 }
 
+.services-carousel {
+  padding-bottom: 0.5rem;
+}
+
+.services-carousel .carousel-inner {
+  overflow: hidden;
+  min-height: 320px;
+  height: 320px;
+}
+
+.services-carousel .carousel-item {
+  height: 100%;
+  min-height: 320px;
+}
+
+.services-carousel .carousel-item > .row {
+  min-height: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.services-carousel .carousel-item .col {
+  display: flex;
+  height: 100%;
+}
+
+.services-carousel .carousel-control-prev,
+.services-carousel .carousel-control-next {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.services-carousel .carousel-control-prev:hover,
+.services-carousel .carousel-control-next:hover {
+  background: var(--secondary-color);
+}
+
+.services-carousel .carousel-control-prev-icon,
+.services-carousel .carousel-control-next-icon {
+  width: auto;
+  height: auto;
+  background-image: none;
+}
+
+.services-carousel .carousel-control-icon {
+  color: var(--white-color);
+  font-size: 1.1rem;
+}
 
 /*---------------------------------------
   PROJECTS              
