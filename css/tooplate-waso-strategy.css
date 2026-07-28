@@ -517,40 +517,37 @@ strong {
   background: var(--section-bg-color);
 }
 
-.nav-tabs {
-  border-bottom: 0;
-}
-
-.nav-tabs .nav-link,
-.nav-tabs .nav-link span {
-  color: var(--p-color);
-  display: block;
-  text-align: left;
-}
-
-.nav-tabs .nav-link {
-  border-radius: 0;
-  border: 0;
+.service-card {
+  background: var(--white-color);
   border-left: 7px solid var(--p-color);
-  margin-right: 30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
   padding: 30px;
+  text-align: left;
   transition: all 0.3s ease-in-out;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus, 
-.nav-tabs .nav-link:hover {
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card span {
+  color: var(--p-color);
+  display: block;
+}
+
+.service-card .service-icon {
+  color: var(--primary-color);
+  display: block;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.service-card:hover {
   border-left-color: var(--secondary-color);
-  background: var(--white-color);
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
-.nav-tabs .nav-link.active h3,
-.nav-tabs .nav-link:focus h3, 
-.nav-tabs .nav-link:hover h3 {
+.service-card:hover h3 {
   color: var(--primary-color);
 }
 
@@ -888,10 +885,8 @@ strong {
     bottom: 20px;
   }
 
-  .nav-tabs .nav-link {
-    margin-right: 0;
-    margin-left: 0;
-    padding: 15px;
+  .service-card {
+    padding: 20px;
   }
 
   .contact-info {
