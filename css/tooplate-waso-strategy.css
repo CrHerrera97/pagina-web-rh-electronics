@@ -883,11 +883,6 @@ strong {
     padding: 30px;
   }
 
-  .about-info h5 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-
   .about-image {
     height: auto;
     margin-bottom: 24px;
@@ -945,15 +940,6 @@ strong {
   .carousel-control-next, 
   .carousel-control-prev {
     bottom: 20px;
-  }
-
-  .about-thumb {
-    padding: 20px;
-  }
-
-  .about-info h5 {
-    font-size: 16px;
-    margin-bottom: 12px;
   }
 
   .service-card {
