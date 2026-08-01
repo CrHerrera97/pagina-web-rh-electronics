@@ -609,6 +609,22 @@ strong {
   font-size: 1.1rem;
 }
 
+.services-carousel-mobile .carousel-inner {
+  overflow: hidden;
+  min-height: 0;
+  height: auto;
+}
+
+.services-carousel-mobile .carousel-item {
+  height: auto;
+  min-height: 0;
+}
+
+.services-carousel-mobile .service-card {
+  height: auto;
+  min-height: 220px;
+}
+
 /*---------------------------------------
   PROJECTS              
 -----------------------------------------*/
