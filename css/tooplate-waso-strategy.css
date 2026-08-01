@@ -625,6 +625,12 @@ strong {
   min-height: 220px;
 }
 
+.services-carousel-mobile .service-card {
+  height: 260px;
+  min-height: 260px;
+  overflow: hidden;
+}
+
 /*---------------------------------------
   PROJECTS              
 -----------------------------------------*/
@@ -974,4 +980,5 @@ strong {
     padding-bottom: 10px;
   }
 }
+
 
