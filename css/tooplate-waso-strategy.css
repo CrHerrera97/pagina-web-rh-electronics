@@ -398,6 +398,32 @@ strong {
   right: 12px;
 }
 
+.gallery-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-dot.active {
+  background: var(--primary-color);
+  transform: scale(1.15);
+}
+
 /*---------------------------------------
   SITE HEADER              
 -----------------------------------------*/
