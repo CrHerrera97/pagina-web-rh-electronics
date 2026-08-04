@@ -271,53 +271,7 @@ Free Bootstrap 5 HTML Template
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
-
-        <script>
-            document.querySelectorAll('.project-gallery-item').forEach(function (gallery) {
-                const images = JSON.parse(gallery.dataset.images || '[]');
-                const image = gallery.querySelector('.project-gallery-image');
-                const prevButton = gallery.querySelector('.gallery-arrow-prev');
-                const nextButton = gallery.querySelector('.gallery-arrow-next');
-                const dotsContainer = gallery.querySelector('.gallery-dots');
-                let currentIndex = 0;
-
-                images.forEach(function (_, index) {
-                    const dot = document.createElement('button');
-                    dot.type = 'button';
-                    dot.className = 'gallery-dot' + (index === 0 ? ' active' : '');
-                    dot.setAttribute('aria-label', 'Ir a la imagen ' + (index + 1));
-                    dot.addEventListener('click', function () {
-                        currentIndex = index;
-                        image.src = images[currentIndex];
-                        updateDots();
-                    });
-                    dotsContainer.appendChild(dot);
-                });
-
-                function updateDots() {
-                    const dots = dotsContainer.querySelectorAll('.gallery-dot');
-                    dots.forEach(function (dot, index) {
-                        dot.classList.toggle('active', index === currentIndex);
-                    });
-                }
-
-                function updateImage(direction) {
-                    currentIndex = (currentIndex + direction + images.length) % images.length;
-                    image.src = images[currentIndex];
-                    updateDots();
-                }
-
-                prevButton.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    updateImage(-1);
-                });
-
-                nextButton.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    updateImage(1);
-                });
-            });
-        </script>
+        <script src="js/project-gallery.js"></script>
 
     </body>
 </html>
