@@ -7,7 +7,7 @@ document.querySelectorAll('.project-gallery-item').forEach(function (gallery) {
     let currentIndex = 0;
     let touchStartX = 0;
 
-    if (!images.length || !image || !prevButton || !nextButton || !dotsContainer) {
+    if (!images.length || !image || !dotsContainer) {
         return;
     }
 
@@ -37,15 +37,19 @@ document.querySelectorAll('.project-gallery-item').forEach(function (gallery) {
         updateDots();
     }
 
-    prevButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        updateImage(-1);
-    });
+    if (prevButton) {
+        prevButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            updateImage(-1);
+        });
+    }
 
-    nextButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        updateImage(1);
-    });
+    if (nextButton) {
+        nextButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            updateImage(1);
+        });
+    }
 
     gallery.addEventListener('touchstart', function (event) {
         touchStartX = event.changedTouches[0].screenX;
