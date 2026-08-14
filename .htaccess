@@ -1,4 +1,0 @@
-RewriteEngine On
-
-# Redirect /contacts/ and /contacts to the home page
-RewriteRule ^contacts/?$ / [R=301,L]
