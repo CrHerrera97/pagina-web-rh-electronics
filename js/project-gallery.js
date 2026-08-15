@@ -37,6 +37,14 @@ document.querySelectorAll('.project-gallery-item').forEach(function (gallery) {
         updateDots();
     }
 
+    image.addEventListener('click', function (event) {
+        const rect = image.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const isLeftSide = clickX < rect.width / 2;
+
+        updateImage(isLeftSide ? -1 : 1);
+    });
+
     if (prevButton) {
         prevButton.addEventListener('click', function (event) {
             event.preventDefault();
