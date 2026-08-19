@@ -900,6 +900,30 @@ strong {
   color: var(--primary-color);
 }
 
+.whatsapp-float {
+  align-items: center;
+  background: #25D366;
+  border-radius: 50%;
+  bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+  color: var(--white-color);
+  display: flex;
+  font-size: 30px;
+  height: 60px;
+  justify-content: center;
+  position: fixed;
+  right: 24px;
+  width: 60px;
+  z-index: 1030;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  background: #1ebe5d;
+  color: var(--white-color);
+  transform: translateY(-3px);
+}
+
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -945,6 +969,11 @@ strong {
   .section-padding {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .whatsapp-float {
+    bottom: 18px;
+    right: 18px;
   }
 
   .custom-btn {
